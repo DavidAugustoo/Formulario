@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <aside>
+        
+    </aside>
+
+    <main>
+        <form method="POST" action="/cadastro" class="validator">
+            <h3>Informações pessoais</h3>
+            <div class="personal">
+                <label> Nome *
+                    <br> 
+                    <input type="text" data-rules="required">
+                </label>
+
+                <label> Email *
+                    <br> 
+                    <input type="text" data-rules="required|email">
+                </label>
+                <label> CPF *
+                    <br> 
+                    <input type="number" maxlength="11" data-rules="required|cpf" oninput="maxLenght(this)">
+                </label>
+                <label> Nome do pai 
+                    <br> 
+                    <input type="text">
+                </label>
+                <label> Nome da mãe 
+                    <br> 
+                    <input type="text">
+                </label>
+            </div>
+
+            <h3>Contato</h3>
+
+            <div class="contact">
+                <label> Telefone * 
+                    <br> 
+                    <input type="tel" data-rules="required|tel" maxlength="16">
+                </label>
+
+                <div class="cep-container">
+                    <label> CEP * 
+                        <br> 
+                        <input type="number" id="search"  maxlength="8" data-rules="required|cep" oninput="maxLenght(this)">
+                    </label>
+                    <a href="#" class="search">Pesquisar</a>
+
+                </div>
+                
+                <label> Endereço 
+                    <br> 
+                    <input type="text" id="endereco">
+                </label>
+
+                <div class="contact-city">
+                    <label> Bairro
+                        <br> 
+                        <input class="input-restricted" id="bairro" type="tel" >
+                    </label>
+                    <label> Cidade
+                        <br> 
+                        <input class="input-restricted" id="cidade" type="text" >
+                    </label>
+                    <label> Estado
+                        <br> 
+                        <input class="input-restricted" id="estado" type="text">
+                    </label>
+                </div>
+            </div>
+            
+            <button type="submit">Cadastrar</button>
+        </form>
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

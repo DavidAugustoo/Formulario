@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --background-color: #4B7BF9;
+    --background-input: #F4F4F4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+}
+
+aside {
+    background-color: var(--background-color);
+    height: 100vh;
+    flex: 1;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
+    overflow: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40%;
+    padding: 20px;
+}
+
+.personal {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-city {
+    display: flex;
+    gap: 10px;
+}
+
+.cep-container{
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.cep-container button{
+    height: 30px;
+    width: 140px;
+}
+
+.cep-container input {
+    width: 230px;
+}
+
+.input-restricted {
+    width: 126px;
+}
+
+label {
+    font-size: 13px;
+}
+
+input {
+    width: 400px;
+    height: 30px;
+    background-color: var(--background-input);
+    border: 2px solid transparent;
+    padding: 0px 10px;
+    appearance: none;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    width: 150px;
+    height: 30px;
+    text-decoration: none;
+    background-color: var(--background-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    background-color: var(--background-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.error {
+    font-size: 10px;
+    font-weight: 600;
+    color: red;
+    padding: 4px;
+}
+
